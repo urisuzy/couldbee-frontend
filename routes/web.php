@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::get('/product', function () {
     return view('product');
 });
+Route::get('/my-products', function () {
+    return view('pages.my-products.list');
+});

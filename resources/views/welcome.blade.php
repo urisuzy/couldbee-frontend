@@ -18,7 +18,7 @@
                     <div class="carousel-caption text-start">
                         <h1>Lebaran Trendi</h1>
                         <p>Tampil trendy dihari lebaran dengan outfit baru yang waw.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Cek Sekarang</a></p>
+                        <p><a class="mb-1 btn btn-lg btn-primary" href="#">Cek Sekarang</a></p>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="carousel-caption">
                         <h1>Super Gadget Day</h1>
                         <p>Perbarui gadgetmu biar ga ketinggalan sama mantanmu, doi aja dah pake yang paling baru, kamu kapaan</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Perbarui Sekarang</a></p>
+                        <p><a class="mb-1 btn btn-lg btn-primary" href="#">Perbarui Sekarang</a></p>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <div class="carousel-caption text-end">
                         <h1>#ToTheMoon Halu</h1>
                         <p>Kesel liat porto kebakaran? shoppingin aja biar duit ga ilang percuma</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Liat Hot Product</a></p>
+                        <p><a class="mb-1 btn btn-lg btn-primary" href="#">Liat Hot Product</a></p>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,17 @@
         </button>
     </div>
 </main>
-<div class="container mt-2">
+<div class="container">
+    <div class="mb-2 text-center">
+        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
+        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
+    </div>
     <div class="row">
         <div class="col-md-3 my-2">
             @include('components.products.product-card')
