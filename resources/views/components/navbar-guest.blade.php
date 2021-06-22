@@ -13,25 +13,11 @@
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-store"></i> Store
+                        <i class="fas fa-user"></i> User
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/my-store/products"><i class="fas fa-shopping-bag"></i> My Products</a></li>
-                        <li><a class="dropdown-item" href="/my-store/sales"><i class="fas fa-clipboard-check"></i> Sales</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user"></i> Alya
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/my-account/balance"><i class="fas fa-money-check-alt"></i> Rp 550.000</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="/my-account/orders"><i class="fas fa-shopping-bag"></i> Orders</a></li>
-                        <li><a class="dropdown-item" href="/my-account/setting"><i class="fas fa-cog"></i> Setting</a></li>
-                        <li><a class="dropdown-item" href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <li><a class="dropdown-item" href="/auth/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a class="dropdown-item" href="/auth/register"><i class="fas fa-user-plus"></i> Register</a></li>
                     </ul>
                 </li>
             </ul>

@@ -4,7 +4,7 @@
     <td>34</td>
     <td>Humidifier</td>
     <td>
-        <button class="btn btn-info btn-sm">Edit</button>
-        <button class="btn btn-danger btn-sm">Delete</button>
+        <a class="btn btn-info btn-sm" href="/my-store/product/1/edit">Edit</a>
+        <a class="btn btn-danger btn-sm" href="/my-store/product/1/delete">Delete</a>
     </td>
 </tr>

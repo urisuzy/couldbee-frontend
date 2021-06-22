@@ -9,9 +9,6 @@
                         <span class="badge bg-success">Online</span>
                     </div>
                     <div class="col-4">
-                        <div class=" d-grid gap-2">
-                            <button class="btn btn-outline-success">View</button>
-                        </div>
                     </div>
                 </div>
             </div>

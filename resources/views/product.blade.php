@@ -36,7 +36,7 @@
                     <p><i class="fas fa-shipping-fast"></i> Ongkir <b>Gratis</b></p>
                     <p><i class="fas fa-clock"></i> Estimasi tiba <b>Besok</b></p>
                     <div class="d-grid gap-2">
-                        <a href="#" class="btn btn-primary btn-block"><i class="fas fa-shopping-cart"></i> Buy</a>
+                        <a href="/order/buy/1" class="btn btn-primary btn-block"><i class="fas fa-shopping-cart"></i> Buy</a>
                     </div>
                 </div>
             </div>

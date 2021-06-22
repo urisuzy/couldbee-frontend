@@ -61,14 +61,14 @@
 </main>
 <div class="container">
     <div class="mb-2 text-center">
-        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</button>
-        <button type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</button>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-primary"><i class="fas fa-tv"></i> Elektronik</a>
+        <a href="/search?category=Elektronik" type="button" class="mb-1 btn btn-info"><i class="fas fa-tv"></i> Elektronik</a>
     </div>
     <div class="row">
         <div class="col-md-3 my-2">

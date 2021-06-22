@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container mt-3">
-    <button class="btn btn-success float-end mb-2"><i class="fas fa-plus-circle"></i> Add Product</button>
-    <table class="table table-dark table-hover">
-        <thead>
+    <a class="btn btn-success float-end mb-2" href="/my-store/product/add"><i class="fas fa-plus-circle"></i> Add Product</a>
+    <table class="table table-hover">
+        <thead class="table-dark">
             <tr>
                 <th scope="col">Pic</th>
                 <th scope="col">Nama</th>
