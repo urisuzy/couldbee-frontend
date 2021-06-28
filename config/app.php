@@ -2,6 +2,7 @@
 
 return [
 
+    'token_api' => 'QW5qYXlNYWJhckdhdXlzU2xqYXNuYWp5U2phc2pubzg0MzgxMjQyMTRp',
     /*
     |--------------------------------------------------------------------------
     | Application Name

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container mt-3">
+    <h3>Sales</h3>
     <table class="table table-hover">
         <thead class="table-dark">
             <tr>
@@ -15,9 +16,9 @@
             </tr>
         </thead>
         <tbody>
-            @include('components.account.sales-list-row')
-            @include('components.account.sales-list-row')
-            @include('components.account.sales-list-row')
+            @foreach($transactions as $order)
+            @include('components.account.sales-list-row', ['order' => $order])
+            @endforeach
         </tbody>
     </table>
 </div>

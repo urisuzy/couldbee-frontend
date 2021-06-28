@@ -5,7 +5,7 @@
             <div class="col-10">
                 <div class="row">
                     <div class="col-8">
-                        <h5><b>Sinar Jaya Mall</b></h5>
+                        <h5><b>{{$name}}</b></h5>
                         <span class="badge bg-success">Online</span>
                     </div>
                     <div class="col-4">

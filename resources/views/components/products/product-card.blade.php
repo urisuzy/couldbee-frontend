@@ -1,14 +1,13 @@
-<a href="/product" class="text-decoration-none text-dark">
-    <div class="card">
+<a href="/product/{{$id}}" class="text-decoration-none text-dark">
+    <div class="card h-100 shadow ">
         <div>
-            <span class="badge bg-warning position-absolute mx-2 my-2"><i class="fas fa-star"></i> 4.5</span>
-            <img src="/product.png" class="card-img-top" alt="...">
-
+            <span class="badge bg-warning position-absolute mx-3 my-3"><i class="fas fa-star"></i> 4.5</span>
+            <img src="{{$image}}" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
-            <h5 class="card-title">Short Product Name</h5>
-            <p class="card-text">Rp 50.000</p>
-            <span class="badge bg-primary mb-1"><i class="fas fa-shield-alt"></i> Sinar Jaya Mall</span><br>
+            <b class="card-title">{{substr($name, 0, 30)}}</b>
+            <p class="card-text">Rp {{number_format($price)}}</p>
+            <span class="badge bg-primary mb-1"><i class="fas fa-shield-alt"></i> {{$store}}</span><br>
         </div>
     </div>
 </a>

@@ -6,10 +6,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse form-inline" id="navbarSupportedContent">
-            <div class="input-group mx-5">
-                <input type="text" class="form-control" placeholder="Search something" aria-label="Search something" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
-            </div>
+
+            <!-- <div class=""> -->
+                <form action="/search" class="input-group mx-5 my-0">
+                    <input type="text" class="form-control" placeholder="Search something" aria-label="Search something" name="q">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+                </form>
+            <!-- </div> -->
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,10 +25,10 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user"></i> Alya
+                        <i class="fas fa-user"></i> {{Cookie::get('name')}}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/my-account/balance"><i class="fas fa-money-check-alt"></i> Rp 550.000</a></li>
+                        <li><a class="dropdown-item" href="/my-account/balance"><i class="fas fa-money-check-alt"></i> Rp {{number_format(Cookie::get('balance'))}}</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

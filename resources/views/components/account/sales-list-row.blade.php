@@ -1,15 +1,26 @@
+@inject('helper', \App\Helpers\Helper::class)
 <tr>
-    <th scope="row">#7128</th>
-    <td style="max-width: 5%" class="text-center"><img src="https://images.tokopedia.net/img/cache/100-square/product-1/2020/5/26/30993733/30993733_a6548883-2b64-4cff-9bca-1c2478e5fd16_700_700.webp?ect=4g" alt=""></td>
-    <td>Onix Air Humidifier Aroma Diffuser 7 LED - 500ML</td>
-    <td>Rp 82.000</td>
-    <td>9</td>
+    <th scope="row">{{$order->id}}</th>
+    <td class="text-center"><img src="{{$order->product->picture}}" alt="" width="150px"></td>
     <td>
-        <span class="badge bg-info">Dikirim</span>
-        <span class="badge bg-primary">Diterima</span>
-        <span class="badge bg-success">Selesai</span>
+        <b>{{$order->product->name}}</b>
+        <p class="mt-2">
+            Nama: {{$order->user->name}}
+            <br>
+            Alamat: {{$order->user->address}}
+        </p>
+    </td>
+    <td>Rp {{number_format($order->product->price)}}</td>
+    <td>{{$order->quantity}}</td>
+    <td>
+
+        <span class="badge bg-{{$helper->statusColor($order->status)}}">{{ucfirst($order->status)}}</span>
     </td>
     <td>
-        <button class="btn btn-success btn-sm">Kirim</button>
+        @if($order->status == 'dibayar')
+        <a class="btn btn-success btn-sm" href="/my-account/order/update/{{$order->id}}/dikirim">Dikirim</a>
+        @else
+        No Action
+        @endif
     </td>
 </tr>
