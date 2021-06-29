@@ -13,10 +13,10 @@ class ProductController extends Controller
     {
         $product = $this->request('GET', 'product/detail/' . $id, []);
         $user = $this->request('GET', 'user/detail/' . $product->product->user_id, []);
+
         if (!empty(Cookie::get('user_id'))) {
             $userAuth = $this->request('GET', 'user/detail/' . Cookie::get('user_id'), []);
         }
-        $user = $this->request('GET', 'user/detail/' . $product->product->user_id, []);
         return view('product', ['product' => $product->product, 'user' => $user->user, 'userAuth' => $userAuth->user ?? []]);
     }
 }

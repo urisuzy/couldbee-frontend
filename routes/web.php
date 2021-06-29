@@ -43,12 +43,11 @@ Route::middleware([IsLoggedin::class])->group(function () {
 
     Route::get('/my-account/setting', [AccountController::class, 'viewEdit']);
     Route::post('/my-account/setting', [AccountController::class, 'updateUser']);
-
-    Route::get('/search', [HomeController::class, 'search']);
 });
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('product/{id}', [ProductController::class, 'product']);
+Route::get('/search', [HomeController::class, 'search']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);

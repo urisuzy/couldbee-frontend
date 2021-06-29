@@ -28,27 +28,32 @@ class OrderController extends Controller
 
     public function confirmation(Request $request)
     {
-        $decrease = $this->request('POST', 'balance/decrease', ['user_id' => $request->user_id, 'total' => $request->total_price]);
-        if ($decrease->balance) {
-            $confirm = $this->request('POST', 'transaction/tambah', [
-                'quantity' => $request->quantity,
-                'user_id' => $request->user_id,
-                'seller_id' => $request->seller_id,
-                'total_price' => $request->total_price,
-                'product_id' => $request->product_id,
-                'date' => $request->date,
-                'status' => $request->status
-            ]);
-            $this->request('POST', 'mutation/store', [
-                'user_id' => $request->user_id,
-                'status_balance' => -$request->total_price,
-                'remain_balance' => Cookie::get('balance') - $request->total_price,
-                'detail_mutation' => 'Pengurangan balance digunakan untuk membeli sebuah produk',
-                'date' => date("Y-m-d H:i:s")
-            ]);
-        }
+        $balance = $this->request('GET', 'balance/detail/' . $request->cookie('user_id'), []);
+        $product = $this->request('GET', 'product/detail/' . $request->product_id, []);
 
-        if (!$confirm->transaction) return back();
+        if (!empty($balance->balance) && !empty($product->product) && $balance->balance->balance > $product->product->price + 27000) {
+            $decrease = $this->request('POST', 'balance/decrease', ['user_id' => $request->user_id, 'total' => $product->product->price + 27000]);
+            if ($decrease->balance) {
+                $confirm = $this->request('POST', 'transaction/tambah', [
+                    'quantity' => $request->quantity,
+                    'user_id' => $request->user_id,
+                    'seller_id' => $request->seller_id,
+                    'total_price' => $request->total_price,
+                    'product_id' => $request->product_id,
+                    'date' => $request->date,
+                    'status' => $request->status
+                ]);
+                $this->request('POST', 'mutation/store', [
+                    'user_id' => $request->user_id,
+                    'status_balance' => -$product->product->price + 27000,
+                    'remain_balance' => Cookie::get('balance') - $request->total_price,
+                    'detail_mutation' => 'Pengurangan balance digunakan untuk membeli sebuah produk',
+                    'date' => date("Y-m-d H:i:s")
+                ]);
+            }
+        } else {
+            return back();
+        }
         Cookie::queue(Cookie::make('balance', $request->cookie('balance') - $request->total_price, 525600));
         return view('pages.order.success-buy');
     }

@@ -12,7 +12,6 @@
     <link href="https://getbootstrap.com/docs/5.0/examples/carousel/carousel.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Couldbee</title>
-
 </head>
 
 <body>

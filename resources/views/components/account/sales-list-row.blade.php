@@ -18,7 +18,7 @@
     </td>
     <td>
         @if($order->status == 'dibayar')
-        <a class="btn btn-success btn-sm" href="/my-account/order/update/{{$order->id}}/dikirim">Dikirim</a>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-product="{{$order->id}}">Kirim</button>
         @else
         No Action
         @endif

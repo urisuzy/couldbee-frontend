@@ -11,6 +11,9 @@
     </td>
     <td>
         @if($order->status != 'dibayar' && $order->status != 'selesai')
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Lacak
+        </button>
         <a class="btn btn-success btn-sm" href="/my-account/order/update/{{$order->id}}/selesai">Selesai</a>
         @else
         No Action

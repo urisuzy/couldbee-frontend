@@ -9,7 +9,10 @@
         </div>
         <div class="col-md-5 mt-2">
             <h4><b>{{$product->name}}</b></h4>
-            <p>Stok {{$product->stock}} | <i class="fas fa-star" style="color:gold"></i> 4.5</p>
+            <p>
+                <i class="fas fa-cubes"></i> Stok {{$product->stock}} | <i class="fas fa-star" style="color:gold"></i> 4.5 | <i class="fas fa-layer-group"></i> {{$product->category}}
+                
+            </p>
             <nav class="mt-3 mb-1">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Description</button>

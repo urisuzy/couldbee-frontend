@@ -10,7 +10,10 @@ class HomeController extends Controller
     use ApiRequester;
     public function index()
     {
-        $products = $this->request('GET', 'product', []);
+        $products = $this->request('GET', 'product', [
+            'order_by' => 'id',
+            'order' => 'desc'
+        ]);
         foreach ($products->product->data as $data) {
             $user = $this->request('GET', 'user/detail/' . $data->user_id, []);
             $data->store = $user->user->name;

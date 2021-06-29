@@ -14,7 +14,7 @@ class AuthController extends Controller
     {
         $login = $this->request('POST', 'auth/login', ['email' => $request->email, 'password' => $request->password]);
 
-        if ($login->user) {
+        if (isset($login->user) && $login->user) {
             $user = $this->request('GET', 'user/detail/' . $login->user->id, []);
             $balance = $this->request('GET', 'balance/detail/' . $login->user->id, []);
 
