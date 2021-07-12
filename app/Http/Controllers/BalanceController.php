@@ -12,6 +12,8 @@ class BalanceController extends Controller
     public function index()
     {
         $mutation = $this->request('GET', 'mutations/' . Cookie::get('user_id'), []);
+        $balance = $this->request('GET', 'balance/detail/' . Cookie::get('user_id'), []);
+        Cookie::queue(Cookie::make('balance', $balance->balance->balance, 525600));
         return view('pages.my-account.balance', ['mutation' => $mutation->mutation->data]);
     }
 

@@ -74,6 +74,10 @@ class OrderController extends Controller
     public function updateOrder($id, $status)
     {
         $this->request('POST', 'transaction/update', ['id' => $id, 'status' => $status]);
+        $tran = $this->request('GET', 'transaction/detail/' . $id, []);
+        if ($status == 'selesai') {
+            $this->request('POST', 'balance/increase', ['user_id' => $tran->transaction->seller_id, 'total' => $tran->transaction->total_price]);
+        }
 
         return back();
     }
